@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Latheesh K. | MCA Graduate & Web Developer Portfolio</title>
+    <meta name="description"
+        content="Personal portfolio of Latheesh K., an MCA graduate, web developer, and IT support specialist. Explore projects, certifications, internships, and technical skills.">
+    <meta name="keywords"
+        content="Latheesh K, MCA Portfolio, Web Developer Puttur, IT Support Specialist, AI ML Intern Mangalore, VCET Puttur, Zephyr Technologies">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="preloader-active">
+
+    <!-- Custom Animated Pointer Cursor (Double-ring) -->
+    <div class="custom-cursor" id="cc-dot"></div>
+    <div class="custom-cursor-follower" id="cc-follower"></div>
+
+    <!-- Page Preloader Screen -->
+    <div class="preloader" id="preloader-overlay">
+        <div class="preloader-loader">
+            <div class="preloader-circle"></div>
+            <div class="preloader-logo">LK</div>
+        </div>
+    </div>
+
+    <!-- Dynamic Mesh Background Orbs -->
+    <div class="bg-mesh-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+    </div>
+
+    <!-- Sticky Glassmorphism Header & Navbar -->
+    <header class="navbar-header" id="navbar-sticky">
+        <div class="navbar-container">
+            <a href="#hero" class="navbar-brand" id="nav-logo-link">
+                <span>L</span>atheesh K.
+            </a>
+
+            <nav class="navbar-nav" aria-label="Main Navigation">
+                <ul class="navbar-links" id="navbar-menu">
+                    <li><a href="#hero" class="active" id="link-hero">Home</a></li>
+                    <li><a href="#about" id="link-about">About</a></li>
+                    <li><a href="#timeline" id="link-timeline">Timeline</a></li>
+                    <li><a href="#skills" id="link-skills">Skills</a></li>
+                    <li><a href="#projects" id="link-projects">Projects</a></li>
+                    <li><a href="#certifications" id="link-certs">Certificates</a></li>
+                    <li><a href="#contact" id="link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="navbar-actions" style="display: flex; align-items: center; gap: 20px;">
+                <!-- Light/Dark Mode Switcher -->
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme Mode">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+
+                <!-- Mobile Navigation Toggle Burger -->
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Open Mobile Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-section" id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="section">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-intro">Welcome to my space</span>
+                    <h1 class="hero-name">Latheesh K</h1>
+                    <div class="hero-role-wrapper">
+                        MCA Graduate | <span class="hero-role"></span>
+                    </div>
+                    <p class="hero-bio">
+                        A motivated computer applications graduate based in <strong>Puttur, Karnataka</strong>.
+                        Specializing in modern full-stack web applications, database management, technical
+                        troubleshooting, and system support.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="assets/latheesh_k_resume.pdf" download="Latheesh_K_Resume.pdf" class="btn btn-primary"
+                            id="hero-btn-resume">
+                            <i class="fa-solid fa-download"></i>
+                            <span class="btn-text">Download Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary" id="hero-btn-hire">Hire Me</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+                            aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+                            aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:latheeshacharya6456@gmail.com" class="social-icon" aria-label="Send Email"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+91-7736989322" class="social-icon" aria-label="Call Phone"><i
+                                class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+
+                <!-- Circular Profile Photo -->
+                <div class="hero-profile-container">
+                    <div class="profile-picture">
+                        <img src="assets/Latheesh_image.jpg" alt="Latheesh K Profile Picture" class="profile-preview"
+                            id="profile-pic-preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About & Achievements Counters Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-grid">
+            <div class="about-intro-box">
+                <p>
+                    I am an ambitious <span class="highlight">Master of Computer Applications (MCA)</span> graduate with
+                    a deep passion for designing performant, clean web solutions and resolving complex IT architectures.
+                    I possess specialized knowledge in system and database administration, software troubleshooting, and
+                    computer networking.
+                </p>
+                <p>
+                    With an academic foundation in computer theory and practical experience during my internship in
+                    AI/ML model integration, I seek an entry-level <span class="highlight">IT Executive, Web Developer,
+                        or Software Support Executive</span> role to drive efficiency and construct robust software
+                    support networks for recruiters and clients.
+                </p>
+            </div>
+        </div>
+
+        <!-- Animated Achievement Counters -->
+        <div class="counters-grid">
+            <div class="counter-card" id="card-count-projects">
+                <i class="fa-solid fa-cubes"></i>
+                <div class="counter-number" data-target="8">0+</div>
+                <div class="counter-label">Projects Completed</div>
+            </div>
+            <div class="counter-card" id="card-count-hackathons">
+                <i class="fa-solid fa-trophy"></i>
+                <div class="counter-number" data-target="2">0</div>
+                <div class="counter-label">Hackathon Wins</div>
+            </div>
+            <div class="counter-card" id="card-count-kscst">
+                <i class="fa-solid fa-award"></i>
+                <div class="counter-number" data-target="1">0</div>
+                <div class="counter-label">KSCST Selection</div>
+            </div>
+            <div class="counter-card" id="card-count-internships">
+                <i class="fa-solid fa-briefcase"></i>
+                <div class="counter-number" data-target="3">0 Months</div>
+                <div class="counter-label">AI/ML Internship</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Combined Education & Internship Timeline -->
+    <section class="section" id="timeline">
+        <h2 class="section-title">Experience & <span>Education</span></h2>
+
+        <div class="timeline-container">
+            <!-- Scroll Progress Line -->
+            <div class="timeline-line-bg"></div>
+            <div class="timeline-line-progress" id="timeline-progress"></div>
+
+            <!-- Block 1: MCA -->
+            <div class="timeline-item timeline-left" id="timeline-item-mca">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023 – 2025</span>
+                    <h3>Master of Computer Applications (MCA)</h3>
+                    <div class="timeline-company">Vivekananda College of Engineering and Technology, Puttur</div>
+                    <p>
+                        Advanced training in database structures, distributed web systems, software testing methodology,
+                        enterprise routing protocols, and mobile application frameworks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Block 2: AI & ML Internship -->
+            <div class="timeline-item timeline-right" id="timeline-item-intern">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Nov 2024 – Jan 2025 (3 Months)</span>
+                    <h3>AI & ML Intern</h3>
+                    <div class="timeline-company">Zephyr Technologies and Solutions Pvt Ltd, Mangalore</div>
+                    <p>
+                        Hands-on application exposure during an intensive academic internship program.
+                    </p>
+                    <ul>
+                        <li>Developed ML-based prediction systems using standard Python toolkits.</li>
+                        <li>Performed data cleaning, feature preprocessing, and handling dataset imbalances.</li>
+                        <li>Configured predictive regression structures and model accuracy validation.</li>
+                        <li>Exposed to cloud-based neural deployment workflows and model version control.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Block 3: BCA -->
+            <div class="timeline-item timeline-left" id="timeline-item-bca">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2020 – 2023</span>
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <div class="timeline-company">Vivekananda College of Engineering and Technology, Puttur</div>
+                    <p>
+                        Graduated with comprehensive coding foundations in Object-Oriented principles (C++, Java), basic
+                        web tech, computer architectures, and relational SQL systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Technical Skills Section -->
+    <section class="section" id="skills">
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+
+        <div class="skills-grid">
+            <!-- Category 1: Languages & Web -->
+            <div class="skills-category" id="skills-cat-web">
+                <h3><i class="fa-solid fa-code"></i> Languages & Web</h3>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">Java</span>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar-outer">
+                        <div class="skill-bar-inner" data-width="75%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar-outer">
+                        <div class="skill-bar-inner" data-width="80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">JavaScript & React.js</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar-outer">
+                        <div class="skill-bar-inner" data-width="85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">HTML5 / CSS3</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar-outer">
+                        <div class="skill-bar-inner" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">PHP</span>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar-outer">
+                        <div class="skill-bar-inner" data-width="70%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Databases & Tools -->
+            <div class="skills-category" id="skills-cat-data">
+                <h3><i class="fa-solid fa-database"></i> Databases & Tools</h3>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">MySQL</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar-outer">
+                        <div class="skill-bar-inner" data-width="85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">PostgreSQL / MongoDB</span>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar-outer">
+                        <div class="skill-bar-inner" data-width="70%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-chips-title"
+                    style="margin: 25px 0 10px 0; font-weight: 600; font-size: 0.95rem; color: var(--text-secondary);">
+                    Tools & Environments</div>
+                <div class="skill-chips">
+                    <div class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+                    <div class="skill-chip"><i class="fa-brands fa-github"></i> GitHub</div>
+                    <div class="skill-chip"><i class="fa-solid fa-terminal"></i> VS Code</div>
+                    <div class="skill-chip"><i class="fa-regular fa-file-excel"></i> MS Excel</div>
+                </div>
+            </div>
+
+            <!-- Category 3: IT Support & Infrastructure -->
+            <div class="skills-category" id="skills-cat-support">
+                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Support & OS</h3>
+
+                <div class="skill-chips-title"
+                    style="margin-bottom: 15px; font-weight: 600; font-size: 0.95rem; color: var(--text-secondary);">IT
+                    Support Expertise</div>
+                <div class="skill-chips" style="margin-bottom: 25px;">
+                    <div class="skill-chip"><i class="fa-solid fa-bugs"></i> System Troubleshooting</div>
+                    <div class="skill-chip"><i class="fa-solid fa-download"></i> Software Installations</div>
+                    <div class="skill-chip"><i class="fa-solid fa-network-wired"></i> LAN/Wi-Fi Diagnostics</div>
+                    <div class="skill-chip"><i class="fa-solid fa-headset"></i> User Technical Support</div>
+                    <div class="skill-chip"><i class="fa-solid fa-globe"></i> Internet Troubleshooting</div>
+                </div>
+
+                <div class="skill-chips-title"
+                    style="margin-bottom: 15px; font-weight: 600; font-size: 0.95rem; color: var(--text-secondary);">
+                    Operating Systems</div>
+                <div class="skill-chips">
+                    <div class="skill-chip"><i class="fa-brands fa-windows"></i> Windows OS (Advanced)</div>
+                    <div class="skill-chip"><i class="fa-brands fa-linux"></i> Linux OS (Basic CLI)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills Pop-in Chips -->
+        <h3 style="text-align: center; margin: 60px 0 25px 0; font-size: 1.6rem;">Professional <span>Attributes</span>
+        </h3>
+        <div class="skill-chips" style="justify-content: center; max-width: 800px; margin: 0 auto;">
+            <div class="skill-chip" style="padding: 12px 24px; font-size: 1rem;"><i class="fa-solid fa-comments"></i>
+                Communication</div>
+            <div class="skill-chip" style="padding: 12px 24px; font-size: 1rem;"><i class="fa-solid fa-lightbulb"></i>
+                Problem Solving</div>
+            <div class="skill-chip" style="padding: 12px 24px; font-size: 1rem;"><i class="fa-solid fa-users-gear"></i>
+                Team Collaboration</div>
+            <div class="skill-chip" style="padding: 12px 24px; font-size: 1rem;"><i
+                    class="fa-solid fa-business-time"></i> Time Management</div>
+            <div class="skill-chip" style="padding: 12px 24px; font-size: 1rem;"><i class="fa-solid fa-user-check"></i>
+                User Coordination</div>
+        </div>
+    </section>
+
+    <!-- 5. Projects Section (Filterable & 3D Tilt Cards) -->
+    <section class="section" id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <!-- Interactive Project Filter Controls -->
+        <div class="projects-filter-container">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web-dev">Web Dev</button>
+            <button class="filter-btn" data-filter="ml-ai">ML & AI</button>
+        </div>
+        <div class="projects-filter-container">
+            <button class="filter-btn" data-filter="iot">IoT</button>
+            <button class="filter-btn" data-filter="software">Software</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+            <!-- Project 1: Cricket Prediction -->
+            <div class="project-card-wrapper" data-category="ml-ai">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="project-badges">
+                            <span class="project-badge ml-ai">ML / AI</span>
+                        </div>
+                    </div>
+                    <h3>Cricket Score Prediction</h3>
+                    <p>
+                        A Python-based Machine Learning prediction algorithm designed to process historical matches and
+                        player metrics. Forecasts final first-innings scores in real-time.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i
+                                class="fa-brands fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Travel Expense Split App -->
+            <div class="project-card-wrapper" data-category="web-dev">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <div class="project-badges">
+                            <span class="project-badge web-dev">Web Dev</span>
+                            <span class="project-award-badge"><i class="fa-solid fa-trophy"></i> CODE-A-THON 1st</span>
+                        </div>
+                    </div>
+                    <h3>Travel Expense Split App</h3>
+                    <p>
+                        A clean, dynamic web application designed to compute group travel expense allocations, complete
+                        with custom charts and SVG visualizations. Winner of VCET CODE-A-THON.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i
+                                class="fa-brands fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Smart Surveillance Camera -->
+            <div class="project-card-wrapper" data-category="iot">
+                <div class="project-card special-selection">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-video"></i></div>
+                        <div class="project-badges">
+                            <span class="project-badge iot">IoT / Hardware</span>
+                            <span class="project-award-badge"
+                                style="color: var(--accent-secondary); border-color: rgba(6,182,212,0.3); background-color: rgba(6,182,212,0.1);"><i
+                                    class="fa-solid fa-star"></i> KSCST Select</span>
+                        </div>
+                    </div>
+                    <h3>Smart PPE Compliance Camera</h3>
+                    <p>
+                        Real-time safety compliance monitoring system using Arduino and ESP32-CAM. Captures worker
+                        safety gear compliance. Highlighted for the KSCST Project Demonstration.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i
+                                class="fa-brands fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Travel Booking Website -->
+            <div class="project-card-wrapper" data-category="web-dev">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                        <div class="project-badges">
+                            <span class="project-badge web-dev">Web Dev</span>
+                        </div>
+                    </div>
+                    <h3>Travel Booking Portal</h3>
+                    <p>
+                        Full-stack travel booking application integrating dynamic pricing engines, online payments, user
+                        review blocks, and an administrative dashboard panel.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i
+                                class="fa-brands fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Solar Power E-Commerce -->
+            <div class="project-card-wrapper" data-category="web-dev">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                        <div class="project-badges">
+                            <span class="project-badge web-dev">Web Dev</span>
+                        </div>
+                    </div>
+                    <h3>Solar Power E-Commerce</h3>
+                    <p>
+                        A responsive e-commerce web platform for exploring and buying solar power hardware solutions,
+                        detailed product sheets, and user review interfaces.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i
+                                class="fa-brands fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: CGPA Calculator -->
+            <div class="project-card-wrapper" data-category="web-dev">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="project-badges">
+                            <span class="project-badge web-dev">Web Dev</span>
+                        </div>
+                    </div>
+                    <h3>CGPA Calculator Web App</h3>
+                    <p>
+                        Highly interactive grade assessment page built using Angular, jQuery, and custom CSS grid
+                        features, calculating university grades dynamically in real-time.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i
+                                class="fa-brands fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7: Food Waste Management -->
+            <div class="project-card-wrapper" data-category="web-dev">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+                        <div class="project-badges">
+                            <span class="project-badge web-dev">Web Dev</span>
+                        </div>
+                    </div>
+                    <h3>Food Waste Management</h3>
+                    <p>
+                        Social enterprise portal linking food merchants and hotels having surplus meals with local
+                        non-profit charities and volunteer distribution groups.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i
+                                class="fa-brands fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8: Recipe Manager -->
+            <div class="project-card-wrapper" data-category="software">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="project-badges">
+                            <span class="project-badge software">Software</span>
+                        </div>
+                    </div>
+                    <h3>Java Recipe Manager</h3>
+                    <p>
+                        A Java OOP application implementing recipe management, categorization algorithms, step-by-step
+                        guidance systems, and local SQL archiving systems.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i
+                                class="fa-brands fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Live GitHub Stats Widget -->
+        <div class="github-stats-container">
+            <div class="github-stats-header">
+                <i class="fa-brands fa-github"></i>
+                <h3>Open Source Contribution Insights</h3>
+            </div>
+            <div class="github-stats-grid">
+                <!-- SWAP IMAGES WITH REAL GITHUB USERNAME LATER (e.g. latheesh-k) -->
+                <!-- Github Stats Card -->
+                <div class="github-stat-card">
+                    <img src="https://github-readme-stats.vercel.app/api?username=latheesh-k&show_icons=true&theme=tokyonight&hide_border=true&bg_color=12131a"
+                        alt="Latheesh K. GitHub Stats">
+                </div>
+                <!-- Github Top Languages Card -->
+                <div class="github-stat-card">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=latheesh-k&layout=compact&theme=tokyonight&hide_border=true&bg_color=12131a"
+                        alt="Latheesh K. Top Languages Used">
+                </div>
+            </div>
+
+            <!-- simulated git grid wrapper -->
+            <div class="github-contrib-mock">
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">Visual contribution activity timeline
+                    dashboard</p>
+                <div class="github-contrib-grid">
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-4"></div>
+                    <div class="contrib-cell lvl-3"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                    <div class="contrib-cell lvl-2"></div>
+                    <div class="contrib-cell"></div>
+                    <div class="contrib-cell lvl-1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Certifications & Achievements Gallery -->
+    <section class="section" id="certifications">
+        <h2 class="section-title">Certifications & <span>Achievements</span></h2>
+
+        <div class="cert-gallery-grid">
+
+            <!-- Cert 1: MOOC VTU -->
+            <!-- Placeholder for certificate visual frames, hover is enabled, lightbox pops on click -->
+            <div class="cert-card" id="cert-card-mooc">
+                <div class="cert-img-wrapper">
+                    <!-- SWAP IMAGE WITH REAL SOURCE FILE WHEN READY e.g. src="assets/mooc_cert.jpg" -->
+                    <div class="cert-img-placeholder">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>MOOC Course Cert</span>
+                        <p>Click to Preview</p>
+                    </div>
+                </div>
+                <div class="cert-card-info">
+                    <h4>MOOC Privacy, Security and Social Media</h4>
+                    <p>VTU | 2024</p>
+                </div>
+            </div>
+
+            <!-- Cert 2: ISRO Quiz -->
+            <div class="cert-card" id="cert-card-isro">
+                <div class="cert-img-wrapper">
+                    <!-- SWAP IMAGE e.g. src="assets/isro_cert.jpg" -->
+                    <div class="cert-img-placeholder">
+                        <i class="fa-solid fa-space-shuttle"></i>
+                        <span>1st Place ISRO Quiz</span>
+                        <p>Click to Preview</p>
+                    </div>
+                </div>
+                <div class="cert-card-info">
+                    <h4>ISRO Quiz - 1st Place</h4>
+                    <p>VCET College | Academic Win</p>
+                </div>
+            </div>
+
+            <!-- Cert 3: CODE-A-THON -->
+            <div class="cert-card" id="cert-card-codeathon">
+                <div class="cert-img-wrapper">
+                    <!-- SWAP IMAGE e.g. src="assets/codeathon_cert.jpg" -->
+                    <div class="cert-img-placeholder">
+                        <i class="fa-solid fa-trophy" style="color: var(--accent);"></i>
+                        <span>1st Place Code-A-Thon</span>
+                        <p>Click to Preview</p>
+                    </div>
+                </div>
+                <div class="cert-card-info">
+                    <h4>CODE-A-THON - 1st Place</h4>
+                    <p>VCET College | Competitive coding</p>
+                </div>
+            </div>
+
+            <!-- Cert 4: IIRS-ISRO Programme -->
+            <div class="cert-card" id="cert-card-iirs">
+                <div class="cert-img-wrapper">
+                    <!-- SWAP IMAGE e.g. src="assets/iirs_cert.jpg" -->
+                    <div class="cert-img-placeholder">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>IIRS-ISRO Outreach</span>
+                        <p>Click to Preview</p>
+                    </div>
+                </div>
+                <div class="cert-card-info">
+                    <h4>IIRS-ISRO Outreach Certificate</h4>
+                    <p>ISRO Remote Sensing Programme</p>
+                </div>
+            </div>
+
+            <!-- Cert 5: KSCST Project Selection -->
+            <div class="cert-card" id="cert-card-kscst">
+                <div class="cert-img-wrapper">
+                    <!-- SWAP IMAGE e.g. src="assets/kscst_cert.jpg" -->
+                    <div class="cert-img-placeholder">
+                        <i class="fa-solid fa-file-shield" style="color: var(--accent-secondary);"></i>
+                        <span>KSCST Selection Doc</span>
+                        <p>Click to Preview</p>
+                    </div>
+                </div>
+                <div class="cert-card-info">
+                    <h4>Selected for KSCST Demonstration</h4>
+                    <p>Higher Authority Project Exhibition</p>
+                </div>
+            </div>
+
+            <!-- Cert 6: Coming Soon Placeholder -->
+            <div class="cert-card cert-card-soon" id="cert-card-placeholder">
+                <div class="cert-img-wrapper">
+                    <div class="cert-img-placeholder">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span>Certificate Coming Soon</span>
+                        <p>Pulsing Upload Placeholder</p>
+                    </div>
+                </div>
+                <div class="cert-card-info">
+                    <h4>Upcoming Achievement</h4>
+                    <p>Awaiting Verification</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Certificate Modal Lightbox Overlay -->
+    <div class="lightbox" id="cert-lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" aria-label="Close Lightbox Modal">&times;</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- 7. Testimonials Carousel -->
+    <section class="section" id="testimonials">
+        <h2 class="section-title">Academic <span>Feedback</span></h2>
+
+        <div class="testimonials-slider-container">
+            <div class="testimonials-track" id="testimonials-carousel-track">
+
+                <!-- Slide 1 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p class="testimonial-text">
+                            "Latheesh demonstrated strong problem-solving skills during our competitive hackathons. His
+                            dedication to writing clean code and structuring analytical logic under tight schedules was
+                            highly impressive."
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>Hackathon Coordinator</h4>
+                            <p>Vivekananda College of Engineering & Tech</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p class="testimonial-text">
+                            "During his 3-month AI & ML internship with us, Latheesh showed a remarkable appetite for
+                            learning. He contributed effectively to preparing regression models and understanding AI
+                            workflow integrations."
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>Zephyr Solutions Mentor</h4>
+                            <p>AI/ML Technical Lead</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p class="testimonial-text">
+                            "Latheesh excels in coordinating IT setups and diagnosing networking issues. His calm
+                            approach to hardware diagnostics and user troubleshooting makes him an excellent candidate
+                            for software support teams."
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>MCA Head of Department</h4>
+                            <p>Vivekananda Engineering Department</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slider Dots navigation indicators -->
+            <div class="slider-control-dots" id="slider-dots"></div>
+        </div>
+    </section>
+
+    <!-- 8. Contact Section & Validation Form -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+
+        <div class="contact-grid">
+            <div class="contact-info-column">
+                <div class="contact-info-list">
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-info-details">
+                            <p>Write an Email</p>
+                            <h4><a href="mailto:latheeshacharya6456@gmail.com">latheeshacharya6456@gmail.com</a></h4>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-info-details">
+                            <p>Call My Mobile</p>
+                            <h4><a href="tel:+917736989322">+91-7736989322</a></h4>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-info-details">
+                            <p>My Location</p>
+                            <h4>Puttur, Karnataka, India</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contact-visual-note"
+                    style="background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 25px; border-radius: 16px;">
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+                        <i class="fa-solid fa-circle-info" style="color: var(--accent); margin-right: 8px;"></i>
+                        <strong>Recruiter Note:</strong> I am actively searching for software support, database, network
+                        executive or web developer openings. Ready to join immediately.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Form Block -->
+            <div class="contact-form-container">
+                <!-- Success Overlays inside Form container -->
+                <div class="form-success-overlay" id="form-success-overlay">
+                    <div class="success-icon-wrap">
+                        <i class="fa-solid fa-check success-checkmark"></i>
+                    </div>
+                    <h3>Message Sent!</h3>
+                    <p>Thank you for reaching out, Latheesh will respond back shortly.</p>
+                    <button class="btn btn-primary" id="success-dismiss-btn">Dismiss</button>
+                </div>
+
+                <!-- Canvas Confetti Overlay -->
+                <canvas id="confetti-canvas"></canvas>
+
+                <form id="portfolio-contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" class="form-control" placeholder="John Doe" required>
+                        <span class="validation-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" class="form-control" placeholder="johndoe@email.com"
+                            required>
+                        <span class="validation-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" class="form-control"
+                            placeholder="Job Opportunity / Inquiry" required>
+                        <span class="validation-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Your Message</label>
+                        <textarea id="contact-message" class="form-control"
+                            placeholder="Hello, I would like to discuss..." required></textarea>
+                        <span class="validation-msg"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 12px; gap: 12px;">
+                        <span class="btn-submit-spinner"></span>
+                        <span class="btn-text">Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Chatbot FAQ Assistant Widget -->
+    <div class="chatbot-widget" id="faq-chatbot-widget">
+        <!-- Floating chat trigger button -->
+        <button class="chatbot-btn" id="faq-bot-btn" aria-label="Ask Chatbot Assistant About Me">
+            <i class="fa-solid fa-comment-dots"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Floating Chat Box Container -->
+        <div class="chatbot-container" id="faq-bot-container">
+            <div class="chatbot-header">
+                <div class="chatbot-avatar">LK</div>
+                <div class="chatbot-info">
+                    <h4>Latheesh Assistant</h4>
+                    <span>Active Now</span>
+                </div>
+            </div>
+
+            <div class="chatbot-messages">
+                <div class="chat-bubble bot">
+                    Hello! I'm Latheesh's virtual assistant. Ask me anything about his skills, education, or projects!
+                </div>
+            </div>
+
+            <div class="chatbot-suggestions">
+                <!-- Rendered dynamically by app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Copyright -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                &copy; 2026 <span>Latheesh K.</span> Portfolio. All rights reserved. Built with premium custom
+                animations.
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP CDN Core & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woB4YDLi5BqL15F35gYePenFNYyxm16Di1ey8Ea94LNuzof17A1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnEkVIMLYg36g62di4eGyplikwybJDDRRUgchi1qhD4LgL2N5yEdKSS9xJDEsL3a58F1wVGgQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Internal JS modules -->
+    <script src="js/particles.js?v=3"></script>
+    <script src="js/app.js?v=3"></script>
+    <script src="js/animations.js?v=3"></script>
+</body>
+
+</html>
