@@ -12,6 +12,68 @@ document.addEventListener('DOMContentLoaded', () => {
     initFAQChatbot();
 });
 
+// ===============================
+// EMAILJS CONTACT FORM HANDLER
+// ===============================
+
+// Load EmailJS SDK in HTML before this script:
+// <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+// Replace with your EmailJS Public Key
+emailjs.init("YOUR_PUBLIC_KEY");
+
+const contactForm = document.getElementById("portfolio-contact-form");
+
+contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const btnText = submitBtn.querySelector(".btn-text");
+
+    const name = document.getElementById("contact-name").value.trim();
+    const email = document.getElementById("contact-email").value.trim();
+    const subject = document.getElementById("contact-subject").value.trim();
+    const message = document.getElementById("contact-message").value.trim();
+
+    // Validation
+    if (!name || !email || !subject || !message) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    submitBtn.disabled = true;
+    btnText.textContent = "Sending...";
+
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        to_email: "latheeshacharya6456@gmail.com"
+    };
+
+    try {
+        await emailjs.send(
+            "service_xwop2gj",   // Example: service_abc123
+            "template_1lbd95q",  // Example: template_xyz456
+            templateParams
+        );
+
+        alert("Message sent successfully!");
+
+        contactForm.reset();
+
+    } catch (error) {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send message. Please try again.");
+    } finally {
+        submitBtn.disabled = false;
+        btnText.textContent = "Send Message";
+    }
+});
+
+
+
 /* ==========================================================================
    1. Profile Picture Hover Effect
    ========================================================================== */
@@ -31,7 +93,7 @@ function initProfileUploader() {
    ========================================================================== */
 function initProjectFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards  = document.querySelectorAll('.project-card-wrapper');
+    const projectCards = document.querySelectorAll('.project-card-wrapper');
 
     if (!filterButtons.length || !projectCards.length) return;
 
@@ -104,19 +166,16 @@ function initCertificateLightbox() {
                 `;
                 imageContainer.appendChild(wrapper);
             } else {
-                // Look for static certificate image if available, else render beautiful vector placeholder frame
-                const mockImage = document.createElement('div');
-                mockImage.className = 'lightbox-placeholder-preview';
-                mockImage.innerHTML = `
-                    <i class="fa-solid fa-file-contract" style="color: var(--accent-secondary)"></i>
-                    <h3>${certTitle}</h3>
-                    <p style="margin-top: 10px; max-width: 400px; font-size: 0.95rem;">${certSub}</p>
-                    <span style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 30px; border: 1px dashed var(--border-color); padding: 5px 12px; border-radius: 4px;">Verified Certificate Asset</span>
-                `;
-                imageContainer.appendChild(mockImage);
-            }
+                const imagePath = item.dataset.certImage;
 
-            caption.textContent = `${certTitle} | ${certSub}`;
+                const img = document.createElement('img');
+                img.src = imagePath;
+                img.alt = certTitle;
+                img.className = 'lightbox-certificate-image';
+
+                imageContainer.appendChild(img);
+            }
+            caption.textContent = `${certTitle} `;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden'; // Stop scroll
         });
@@ -143,6 +202,74 @@ function initCertificateLightbox() {
     });
 }
 
+
+// function initCertificateLightbox() {
+//     const galleryItems = document.querySelectorAll('.cert-card');
+//     const lightbox = document.getElementById('cert-lightbox');
+//     const closeBtn = document.querySelector('.lightbox-close');
+//     const imageContainer = lightbox.querySelector('.lightbox-image-container');
+//     const caption = lightbox.querySelector('.lightbox-caption');
+
+//     if (galleryItems.length === 0 || !lightbox) return;
+
+//     galleryItems.forEach(item => {
+//         item.addEventListener('click', () => {
+//             const certTitle = item.querySelector('h4').textContent;
+//             const certSub = item.querySelector('p').textContent;
+//             const isPlaceholder = item.classList.contains('cert-card-soon');
+
+//             imageContainer.innerHTML = ''; // Reset container
+
+//             if (isPlaceholder) {
+//                 // Render visual SVG block inside lightbox
+//                 const wrapper = document.createElement('div');
+//                 wrapper.className = 'lightbox-placeholder-preview';
+//                 wrapper.innerHTML = `
+//                     <i class="fa-solid fa-graduation-cap"></i>
+//                     <h3>Coming Soon</h3>
+//                     <p>This certificate is being validated or processed. Check back soon!</p>
+//                 `;
+//                 imageContainer.appendChild(wrapper);
+//             } else {
+//                 // Look for static certificate image if available, else render beautiful vector placeholder frame
+//                 const mockImage = document.createElement('div');
+//                 mockImage.className = 'lightbox-placeholder-preview';
+//                 mockImage.innerHTML = `
+//                     <i class="fa-solid fa-file-contract" style="color: var(--accent-secondary)"></i>
+//                     <h3>${certTitle}</h3>
+//                     <p style="margin-top: 10px; max-width: 400px; font-size: 0.95rem;">${certSub}</p>
+//                     <span style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 30px; border: 1px dashed var(--border-color); padding: 5px 12px; border-radius: 4px;">Verified Certificate Asset</span>
+//                 `;
+//                 imageContainer.appendChild(mockImage);
+//             }
+
+//             caption.textContent = `${certTitle} | ${certSub}`;
+//             lightbox.classList.add('active');
+//             document.body.style.overflow = 'hidden'; // Stop scroll
+//         });
+//     });
+
+//     const closeLightbox = () => {
+//         lightbox.classList.remove('active');
+//         document.body.style.overflow = '';
+//     };
+
+//     closeBtn.addEventListener('click', closeLightbox);
+//     // Close when clicking the dark backdrop (not the content panel itself)
+//     lightbox.addEventListener('click', (e) => {
+//         if (e.target === lightbox) {
+//             closeLightbox();
+//         }
+//     });
+
+//     // Close on escape key
+//     document.addEventListener('keydown', (e) => {
+//         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+//             closeLightbox();
+//         }
+//     });
+// }
+
 /* ==========================================================================
    4. Testimonials Auto-sliding Carousel
    ========================================================================== */
@@ -150,7 +277,7 @@ function initTestimonialsCarousel() {
     const track = document.querySelector('.testimonials-track');
     const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
     const dotsContainer = document.querySelector('.slider-control-dots');
-    
+
     if (!track || slides.length === 0) return;
 
     let currentIndex = 0;
@@ -175,7 +302,7 @@ function initTestimonialsCarousel() {
     function goToSlide(index) {
         currentIndex = index;
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
-        
+
         // Update dots state
         dots.forEach((dot, idx) => {
             if (idx === currentIndex) {
@@ -216,7 +343,7 @@ function initTestimonialsCarousel() {
     track.addEventListener('touchmove', (e) => {
         if (!isSwiping) return;
         const diffX = e.touches[0].clientX - startX;
-        
+
         if (Math.abs(diffX) > 50) { // Threshold
             if (diffX > 0) {
                 // Swipe right -> previous slide
@@ -261,7 +388,7 @@ function initContactFormValidation() {
         const validateField = () => {
             const val = input.value.trim();
             const group = input.parentElement;
-            
+
             if (val === '') {
                 if (fieldInfo.required) {
                     setFieldStatus(group, 'invalid', 'This field is required.');
@@ -288,7 +415,7 @@ function initContactFormValidation() {
     function setFieldStatus(groupElement, status, message) {
         const msgSpan = groupElement.querySelector('.validation-msg');
         groupElement.classList.remove('valid', 'invalid');
-        
+
         if (status === 'valid') {
             groupElement.classList.add('valid');
         } else if (status === 'invalid') {
@@ -301,7 +428,7 @@ function initContactFormValidation() {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         let isFormValid = true;
         fields.forEach(fieldInfo => {
             const input = document.getElementById(fieldInfo.id);
@@ -332,7 +459,7 @@ function initContactFormValidation() {
                 // Show success screen
                 const successOverlay = document.querySelector('.form-success-overlay');
                 successOverlay.classList.add('active');
-                
+
                 // Trigger canvas confetti explosion
                 triggerConfettiExplosion('confetti-canvas');
 
@@ -391,12 +518,12 @@ function triggerConfettiExplosion(canvasId) {
     let animationFrame;
     function drawConfetti() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
+
         let activeParticles = 0;
 
         particles.forEach(p => {
             if (p.opacity <= 0) return;
-            
+
             activeParticles++;
 
             // Physics dynamics
@@ -446,7 +573,7 @@ function initFAQChatbot() {
     botBtn.addEventListener('click', () => {
         botBtn.classList.toggle('active');
         botContainer.classList.toggle('active');
-        
+
         // Scroll to bottom on open
         if (botContainer.classList.contains('active')) {
             msgList.scrollTop = msgList.scrollHeight;
@@ -494,7 +621,7 @@ function initFAQChatbot() {
         bubble.className = `chat-bubble ${sender}`;
         bubble.innerHTML = text;
         msgList.appendChild(bubble);
-        
+
         // Scroll down
         msgList.scrollTop = msgList.scrollHeight;
     }
