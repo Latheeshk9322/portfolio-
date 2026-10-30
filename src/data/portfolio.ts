@@ -22,7 +22,7 @@ export const portfolioData: PortfolioData = {
     phone: "+91-7736989322",
     github: "https://github.com/Latheeshk9322/portfolio-",
     linkedin: "https://linkedin.com",
-    resumePdf: "/assets/latheesh_k_resume.pdf",
+    resumePdf: "/assets/latheesh_k_resume.pdf", // served from public/assets
     profilePhoto: "/assets/Latheesh_image.jpg",
     availability: "Available immediately for full-time on-site or remote roles",
   },
